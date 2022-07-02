@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: 'python:3.7.3-stretch'
+      - image: 'python:3.7.3-stretch' 
     working_directory: ~/repo
     steps:
       - checkout
@@ -13,7 +13,8 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv venv
+            #Create a virtual enviroment
+            python3 -m venv venv 
             . venv/bin/activate
             make install
             # Install hadolint
@@ -22,7 +23,7 @@ jobs:
       - save_cache:
           paths:
             - ./venv
-          key: 'v1-dependencies-{{ checksum "requirements.txt" }}'
+          key: 'v1-dependencies-{{ checksum "requirements.txt" }}' #Install Dependencies
       - run:
           name: run lint
           command: |

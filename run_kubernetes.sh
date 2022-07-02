@@ -8,7 +8,7 @@ dockerpath="edwinngera/ml-microservice-kubernetes"
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run ml-microservice-kubernetesss --image=docker.io/$dockerpath --port=80
+kubectl run ml-microservice --image=docker.io/$dockerpath --port=80
 
 # Step 3:
 # List kubernetes pods
