@@ -1,19 +1,17 @@
-[![CircleCI](https://circleci.com/gh/Edwinngera/Microservices-at-Scale-using-AWS-Kubernetes
-.svg?style=svg)](https://circleci.com/gh/Edwinngera/Operationalize-a-Machine-Learning-Microservice-API)
-# Operationalize-a-Machine-Learning-Microservice-API
-Microservice Project [Udacity Cloud DevOps Engineer Nanodegree]
-
+[![CircleCI](https://circleci.com/gh/Edwinngera/Microservices-at-Scale-using-AWS-Kubernetes.svg?style=svg)](https://circleci.com/gh/Edwinngera/Microservices-at-Scale-using-AWS-Kubernetes)
 ## Project Overview
-Deploy a containerized Python flask application to serve out predictions (inference) about housing prices through API calls. It uses a a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features. 
+This project deploys a containerized Python flask application to serve out predictions (inference) about housing prices through API calls. It uses a a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features. 
 
-### Project Procedure
-* Test project code using linting
-* Complete a Dockerfile to containerize this application
-* Deploy containerized application using Docker and make a prediction
-* Configure Kubernetes and create a Kubernetes cluster
-* Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate the code has been tested
+### Project Files
 
+- config.yml: CircleCI configuration file for running the tests
+- app.py: Python flask app that serves out predictions (inference) about housing prices through API calls
+- Dockerfile: Dockerfile for building the image
+- make_prediction.sh: Sends a request to the Python flask app to get a prediction, for localhost
+- Makefile: Instructions on environment setup and lint tests
+- run_docker.sh: run  Docker  locally
+- run_kubernetes.sh:  run the app in kubernetes
+- upload_docker.sh: upload the image to docker
 
 
 ---
